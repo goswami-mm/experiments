@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "ap-south-1",
+        "profile_name": "default",
+        "project_name": "template-api",
+        "runtime": "python3.7",
+        "s3_bucket": "temp-bucket-mmg"
+    }
+}

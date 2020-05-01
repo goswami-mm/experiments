@@ -1,2 +1,5 @@
 rootkey.csv
-__pycache__
+/__pycache__/*
+/apienv/*
+/deativate/*
+pipfile.lock
