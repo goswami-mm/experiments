@@ -4,9 +4,6 @@ from flask_jwt import JWT, jwt_required, current_identity
 from flask_restful.reqparse import RequestParser
 from database import DbRepositor, User
 
-users = [{"masnun": "abc123"}]
-USER_ID = {"masnun": "abc123"}
-
 subscriber_request_parser = RequestParser(bundle_errors=True)
 subscriber_request_parser.add_argument("name", type=str, required=True, help="Name has to be valid string")
 subscriber_request_parser.add_argument("password", required=True)
