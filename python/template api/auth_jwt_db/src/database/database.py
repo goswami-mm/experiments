@@ -35,6 +35,8 @@ class DbRepositor:
         except Error as e:
             print("error : ", e)
             return {"error": e}.__str__()
+        except:
+            return {"error"}.__str__()
 
     def validUser(self, name, password):
         conn = sqlite3.connect('my_database.sqlite')
@@ -42,6 +44,7 @@ class DbRepositor:
         query = "SELECT id, name, phone FROM USER WHERE name == ? AND password == ?"
         try:
             row = cursor.execute(query, (name, password)).fetchone()
+            print(row)
             user = User(row[0], row[1], '', row[2])
             conn.commit()
             conn.close()
